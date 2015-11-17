@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>调用checkVality方法进行校验</title>
+</head>
+<body>
+<form action="add" >
+    生日:<input id="birth" name="birth" type="date" /><br />
+    邮件地址:<input id="email" name="email" type="email" />
+    <input type="submit" value="提交" onclick="return check();" />
+</form>
+<script type="text/javascript">
+    var check = function()
+    {
+        return commonCheck("birth","生日","字段必须是有效的生日!")&& commonCheck("email","邮件地址","字段必须符合电子邮件的格式!");
+    }
+
+    var commonCheck = function(field,fieldName,tip)
+    {
+        var targetEle = document.getElementById(field);
+        if (targetEle.value.trim() == "")
+        {
+            alert(fieldName + "字段必须填写!");
+            return false;
+        }
+
+        else if (!targetEle.checkValidity())
+        {
+            alert(fieldName + tip);
+            return false;
+
+        }
+        return false;
+
+    }
+
+
+</script>
+</body>
+</html>

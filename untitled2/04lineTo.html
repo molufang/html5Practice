@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>lineTo示意图</title>
+</head>
+<body>
+<h2>lineTo 示意</h2>
+<canvas id="mc" width="400" height="380" style = "border: 1px solid black" ></canvas>
+<script type="text/javascript">
+    /*
+    *
+    * 该方法富足绘制多角星
+    *
+    * n 该参数通常应设为奇数,控制绘制N角星
+    * dx dy :控制N角星的位置
+    * size:控制N角星的大小
+    * */
+    function  createStart(context,n,dx,dy,size)
+    {
+        context.beginPath();
+        var dig = Math.PI/n *4;
+        context.moveTo(dx,y+dy);
+        for(var i = 0;i<= n;i++)
+        {
+            var x = Math.sin(i*dig);
+            var y = Math.cos(i*dig);
+//            绘制从当前点到连接到指定点的线条
+            context.lineTo(x*size+dx,y*size + dy);
+        }
+
+        context.closePath();
+    }
+
+
+    var canvas = document.getElementById('mc');
+    var ctx = canvas.getContext('2d');
+//    绘制3角星
+    createStart(ctx,3,60,60,50);
+    ctx.fillStyle = '#f00';
+    ctx.fill();
+//    绘制5角星
+    createStart(ctx,5,160,60,50);
+    ctx.fillStyle = '#0f0';
+    ctx.fill();
+//    绘制7角星
+    createStart(ctx,7,260,60,50);
+    ctx.fillStyle = '#00f';
+    ctx.fill();
+//    绘制9角星
+    createStart(ctx,9,360,60,50);
+    ctx.fillStyle = 'f0f';
+    ctx.fill();
+
+</script>
+
+
+
+</body>
+</html>

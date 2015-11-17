@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>list属性</title>
+</head>
+<body>
+<form method="post" action="buy">
+
+    // autocomplete 只有Opera的最新版本才支持,可以设置下拉菜单是否一直显示
+    请输入图书:<input type="text" name="name" list="books" autocomplete="on"/><br>
+</form><br />
+// datalist一个隐形的下拉菜单
+<datalist id="books">
+    <option value="java">java</option>
+    <option value="iOS">iOS</option>
+    <option value="web">web</option>
+</datalist>
+</body>
+</html>

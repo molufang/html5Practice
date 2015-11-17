@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>添加编号</title>
+    <style type="text/css">
+
+        为div的子div元素定义啦一个计数器:
+        div>div {
+            counter-increment: mycounter;
+        }
+
+        div>div:before {
+            content:counter(mycounter)'.';
+            font-size:20pt;
+            font-weight:bold;
+        }
+    </style>
+</head>
+<body>
+<div>
+
+    <div>iOS图书1</div>
+    <div>iOS图书2</div>
+    <div>iOS图书3</div>
+
+</div>
+</body>
+</html>

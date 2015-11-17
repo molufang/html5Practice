@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>E~F伪类选择器</title>
+    <style type="text/css">
+
+        /*匹配id伪android的元素的后面,class属性为long的兄弟节点*/
+        #android ~.long {
+            background-color: #00ff00;
+        }
+    </style>
+</head>
+<body>
+<div>
+    <div>疯狂讲义</div>
+    <div class="long">轻量级企业应用实战</div>
+    <div id="android">android讲义</div>
+    <p class="long">经典实战</p>
+    <div class="long">权威指南</div>
+</div>
+
+</body>
+</html>

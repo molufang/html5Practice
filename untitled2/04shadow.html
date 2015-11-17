@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>启用阴影</title>
+</head>
+<body>
+<h2>启用阴影</h2>
+<canvas id="mc" width="600" height="280" style = "border: 1px solid black" ></canvas>
+<script type="text/javascript" >
+    <!--获取canvas-->
+    var canvas = document.getElementById('mc');
+    var ctx = canvas.getContext('2d');
+//    设置阴影的模糊度
+    ctx.shadowBlur = 5.6;
+//    设置阴影颜色
+    ctx.shadowColor = '#222';
+//    设置阴影在x y 方向的偏移
+    ctx.shadowOffsetX = 10;
+    ctx.shadowOffsetY = -6;
+    ctx.fillStyle = '#00f';
+    ctx.font = 'italic 50px 隶书';
+    ctx.textBaseline = 'top';
+    ctx.fillText('向上吧少年',0,50);
+    ctx.fillRect(20,150,180,80);
+    ctx.lineWidth = 8;
+    ctx.strokeRect(300,150,180,80);
+</script>
+</body>
+</html>

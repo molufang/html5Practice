@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>修改第一行元素</title>
+    <style type="text/css">
+        span {
+            display: block;
+        }
+
+        /*span元素里第一行文字的字体加大,变红,由于span是内联元素,因此需要先把span的display设为block*/
+
+        span:first-line {
+            color: #f00;
+            font-size: 20pt;
+        }
+
+        /*section元素的第一行文字的字体加大,变蓝*/
+        span:first-line {
+            color: #00f;
+            font-size: 30pt;
+        }
+
+        section:first-line {
+            color: #00f;
+            font-size:30pt;
+        }
+
+        p:first-line {
+            color: #00f;
+            font-size: 30pt;
+        }
+    </style>
+
+</head>
+<body>
+
+<span>abc<br />xyz</span>
+
+<section>去年今日此门中,<br />
+    人面桃花相印红</section>
+<p style="width: 160px">图书资料</p>
+
+</body>
+</html>

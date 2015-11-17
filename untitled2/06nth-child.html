@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>nth-child</title>
+    <style type="text/css">
+
+        /*定义对作为其父元素的奇数个子节点的li元素起作用的css样式*/
+        li:nth-child(odd){
+            margin:20px;
+            border: 2px solid black;
+        }
+
+        /*定义作为其父元素的偶数个子节点的li元素起作用的css样式*/
+        li:nth-child(even) {
+            padding: 4px;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+
+<ul>
+    <li id="good">讲义</li>
+    <li id="nice">java</li>
+    <li id="pig">哈哈</li>
+    <li id="read">讲义</li>
+    <li id="gct">java</li>
+    <li id="great">哈哈</li>
+</ul>
+
+
+
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>绘制位图</title>
+</head>
+<body>
+<h2>绘制位图</h2>
+
+<canvas id="mc" width="620" height="280" style = "border: 1px solid black" ></canvas>
+<script type="text/javascript" >
+    var canvas = document.getElementById("mc");
+    var ctx = canvas.getContext('2d');
+    var image = new Image();
+
+    image.src = "garbage.png";
+
+//    图片装载完成时触发该函数
+    image.onload = function()
+    {
+//        保持原大小绘制图片
+        ctx.drawImage(image,20,10);
+//        绘制图片进行缩放
+        ctx.drawImage(image,180,10,76,110);
+        var sd = 20;
+        var sh = 35;
+//      源位图中挖出一块儿,放大3倍后绘制在canvas上
+        ctx.drawImage(image,2,50,sd,sh,265,10,sd*3,sh*3);
+    }
+</script>
+</body>
+</html>

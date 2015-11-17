@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>child</title>
+    <style type="text/css">
+
+        /*定义对作为其父元素的第一个子节点的li元素起作用的css样式*/
+        li:first-child {
+            border: 1px solid black;
+        }
+        /*定义作为其父元素的最后一个子节点的li元素起作用的css样式*/
+        li:last-child {
+            background-color: #aaa;
+        }
+        /*定义作为其父元素的第2个子节点的li元素起作用的css样式*/
+        li:nth-child(2) {
+           color: #888;
+        }
+        /*定义作为其父元素的倒数第2个子节点的li元素起作用的css样式*/
+        li:nth-last-child(2) {
+            font-weight: bold;
+        }
+        /*定义作为其父元素的唯一的子节点的span元素起作用的css样式*/
+        span:only-child {
+            font-size: 30pt;
+            font-family: "隶书";
+        }
+    </style>
+</head>
+<body>
+
+<ol>
+    <li>www.baidu.com</li>
+    <li>www.gongyeyun.com</li>
+    <li>百度</li>
+    <li>北京数码大方科技股份有限公司</li>
+    <li>敬业</li>
+</ol>
+
+<ul>
+    <li id="good">good</li>
+    <li id="nice">nice</li>
+    <li id="caxa">caxa</li>
+    <li id="iOS">iOS</li>
+    <li><span id="android">疯狂android</li>
+</ul>
+
+
+
+</body>
+</html>

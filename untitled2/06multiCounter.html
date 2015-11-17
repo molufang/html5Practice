@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>添加多极编号</title>
+    <style type="text/css">
+
+        /*为div的子h2元素定义啦一个计数器categorycounter,并使用counter-reset重置subcounter计数器*/
+        div>h2 {
+            counter-increment: categorycounter;
+            counter-reset: subcounter;
+
+        }
+        /*为div的子div元素定义啦一个计数器subcounter*/
+
+        div>div {
+            counter-increment: subcounter;
+        }
+
+        /*在div的子h2元素的前端插入categorycounter计数器和一个点*/
+        div>h2:before {
+            content: counter(categorycounter,georgian)'.';
+            font-size: 20pt;
+            font-weight: bold;
+        }
+        /*在div的子div元素的前端插入自定义的subcounter计数器*/
+        div>div:before {
+            content: '第' counter(subcounter,cjk-ideographic)'本.';
+            font-size: 14pt;
+            font-weight: bold;
+            margin-left: 24px;
+        }
+    </style>
+</head>
+<body>
+
+<div>
+    <h2>图书</h2>
+    <div>iOS图书1</div>
+    <div>iOS图书2</div>
+    <div>iOS图书3</div>
+    <h2>其他图书</h2>
+    <div>iOS图书4</div>
+    <div>iOS图书5</div>
+    <div>iOS图书6</div>
+</div>
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>表单</title>
+</head>
+<body>
+<form action="http://www.baidu.com" method="post">
+    下面是简单的下拉菜单:<br />
+    <select id="skills" name = "skills">
+        <option value="java">JAVA 语言</option>
+        <option value="c">C语言</option>
+        <option value="ruby">ruby语言</option>
+    </select><br /><br /><br />
+    //下面是允许多选的列表框:<br />
+    <select id="books" name="books" multiple = "multiple" size="4">
+        <option value="java">java</option>
+        <option value="ios">ios</option>
+        <option value="web">web</option>
+    </select><br /><br /><br />
+    //下面是允许多选的列表框:<br />
+    <select id="leegang" name="leegang" multiple = "multiple" size="6">
+        <optgroup label="iOS讲义" >
+            <option value="code">代码大全</option>
+            <option value="Algorithm">算法</option>
+            <option value="test">iOS测试</option>
+        </optgroup>
+        <optgroup label="其他图书">
+            <option value="structs">struces开发指南</option>
+            <option value="ror">ror敏捷开发</option>
+        </optgroup>
+    </select><br /><br />
+    <button type="submit"><b>提交</b></button><br \>
+</form>
+</body>
+</html>

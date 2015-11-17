@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>伪元素选择器</title>
+    <style type="text/css">
+
+        span {
+            display: block;
+        }
+        /*span元素的第一个字母加粗,变红
+        由于sapn是内联元素,因此需要先把span的display设为block
+        */
+
+        span:first-letter {
+            color: #f00;
+            font-size: 20pt;
+        }
+
+        /*section元素里第一个字母加粗,变蓝*/
+        section:first-letter {
+            color: #00f;
+            font-size: 30pt;
+            font-weight: bold;
+        }
+
+        /*p元素里第一个字母加粗,变蓝*/
+        p:first-letter {
+            color: #00f;
+            font-size: 40pt;
+            font-weight: bold;
+        }
+
+
+    </style>
+</head>
+<body>
+
+<span>abc</span>
+
+<section >其实我是一个程序员</section>
+
+<p>图书资料</p>
+
+</body>
+</html>

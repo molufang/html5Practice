@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>内容相关的属性</title>
+    <style type="text/css">
+
+        /*指定向div元素内部的前段插入content属性对应的内容*/
+        div>div:before{
+            content: 'CrazyIt:';
+            color: blue;
+            font-weight: bold;
+            background-color: gray;
+
+        }
+    </style>
+</head>
+<body>
+<div>
+
+    <div>iOS图书1</div>
+    <div>iOS图书2</div>
+    <div>iOS图书3</div>
+
+</div>
+
+</body>
+</html>

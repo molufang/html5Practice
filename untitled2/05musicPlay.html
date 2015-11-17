@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>音乐播放器</title>
+    <script type="text/javascript">
+
+        var musics = [
+            "brother.mp3",
+            "love.mp3",
+            "brother.mp3",
+            "love.mp3",
+        ];
+
+        var index = 0;
+
+        var playType;
+
+        window.onload = function ()
+        {
+
+            var typeSel = document.getElementById("typeSel");
+
+            typeSel.onchange = function()
+            {
+                window.playType = typeSel.value;
+            }
+
+            var player = document.getElementById("player");
+
+            player.src = musics[index];
+
+            player.onended = function ()
+            {
+
+                if (playType == "random")
+                {
+                    index = Math.floor(Math.random() *musics.length);
+                    player.src = musics[index];
+                }else {
+                    palyer.src = musics[++index % musics.length];
+
+                }
+
+                player.play();
+
+            }
+
+        }
+
+
+    </script>
+
+
+
+</head>
+<body>
+
+<h2>音乐播放器</h2>
+
+<select id="typeSel" style = "width: 160px" >
+    <option value="sequence" >顺序播放</option>
+    <option value="random" >随机播放</option>
+</select><br/><br/>
+
+<audio id="player" controls>
+    您的浏览器不支持audio
+</audio>
+
+
+
+
+
+</body>
+</html>
