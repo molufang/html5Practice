@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>nth-of-type</title>
+    <style type="text/css">
+
+        span {
+            display: block;
+            padding: 2px;
+        }
+
+        /*匹配span选择器,且是与其它同类型,同级兄弟元素*/
+        span:nth-of-type(2n+1) {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+
+<div>
+
+    <div id="good">good</div>
+    <div id="nice">nice</div>
+    <span id="haha">haha</span>
+    <span id="haha2">haha</span>
+    <span id="haha3">haha</span>
+    <span>iOS</span>
+    <div id="status">status</div>
+</div>
+
+
+
+
+</body>
+</html>
