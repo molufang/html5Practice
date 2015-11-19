@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>位置相关属性测试</title>
+</head>
+<body>
+
+ ssssss<br />
+ ssssss<br />
+ ssssss<br />
+ ssssss<br />
+ ssssss<br />
+
+
+<div style="position: absolute;left: 40px;top: 20px;width: 180px;height: 88px;z-index: 2;background-color: #ccc;">
+    positon属性设置为absolute值,该layer完全漂浮于其它页面之上,不受其它对象位置影响,不受其它对象位置影响
+</div>
+
+
+<div id="layer" style="position: relative;left: 50px;top: 10px;width: 200px;height: 88px;z-index: 3;background-color: #999;">
+    positon属性设置为relative值,该layer完全漂浮于其它页面之上,但它将基于上面最后一行文本进行定位
+</div>
+
+ <div style="position: absolute;left: 260px;top: 80px;width: 250px;height: 200px;border: black solid 1px;">
+
+     <div id="Layer3" style="position: static;left: 100px;top: 40px;width: 80px;height: 88px;z-index: 1;background-color: #666;">
+         positon属性设置为static值,但不会有任何影响
+     </div>
+
+
+     <div id="Layer4" style="position: static;left: 100px;top: 80px;width: 80px;height: 88px;z-index: 1;background-color: #999;"></div>
+
+ </div>
+
+
+
+
+
+
+</body>
+</html>

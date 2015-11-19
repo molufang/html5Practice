@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>背景相关属性</title>
+    <style type="text/css">
+
+        div {
+            border: 1px solid #000;
+            height: 50px;
+            width: 200px;
+        }
+    </style>
+
+</head>
+<body>
+
+background-image: url(bg.jpg)
+
+<div style="background-image: url(bg.jpg)"></div>
+
+background-image: url(bg.jpg);-webkit-background-size: 100% 80%;background-size: 20% auto
+背景图片的宽度与组件宽度相同,高度为组件高度的80%
+<div style="background-image: url(bg.jpg);-webkit-background-size: 100% 80%;background-size: 20% auto"></div>
+
+background-image: url(bg.jpg);-webkit-background-size: 20% auto;background-size: 20% auto
+背景图片的宽度是组件宽度的20%,高度保持纵横比缩放
+<div style="background-image: url(bg.jpg);-webkit-background-size: 20% auto;background-size: 20% auto"></div>
+
+
+background-image: url(bg.jpg);-webkit-background-size: auto 50%;background-size: auto 50%
+背景图片的宽度保持纵横比缩放,高度为组件宽度的50%
+<div style="background-image: url(bg.jpg);-webkit-background-size: auto 50%;background-size: auto 50%"></div>
+
+background-image: url(bg.jpg);-webkit-background-size: 60px 30px;background-size: 60px 30px
+背景图片的宽度为60px,高度为30px
+<div style="background-image: url(bg.jpg);-webkit-background-size: 60px 30px;background-size: 60px 30px"></div>
+
+background-image: url(bg.jpg);-webkit-background-size: 40px auto;background-size: 40px auto
+背景图片的宽度是40px,高度保持纵横比缩放
+<div style="background-image: url(bg.jpg);-webkit-background-size: 40px auto;background-size: 40px auto"></div>
+
+background-image: url(bg.jpg);-webkit-background-size: auto 20px;background-size: auto 20px
+背景图片的宽度保持纵横比缩放,高度为组件宽度20px
+<div style="background-image: url(bg.jpg);-webkit-background-size: auto 20px;background-size: auto 20px"></div>
+
+</body>
+</html>

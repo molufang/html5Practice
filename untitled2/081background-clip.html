@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>背景相关属性</title>
+    <style type="text/css">
+
+        div {
+            border: 10px dotted #444;
+            padding: 12px;
+            height: 30px;
+            width: 200px;
+        }
+    </style>
+</head>
+<body>
+
+background-image: url(bg.jpg)
+<div style="background-image: url(bg.jpg)">测试文字</div>
+
+background-image: url(bg.jpg)
+<div style="background-image: url(bg.jpg);background-clip: padding-box">测试文字</div>
+
+background-image: url(bg.jpg)
+<div style="background-image: url(bg.jpg);background-clip: content-box">测试文字</div>
+
+</body>
+</html>

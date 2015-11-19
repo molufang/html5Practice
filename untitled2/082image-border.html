@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>图片边框</title>
+
+    <style type="text/css">
+
+        div {
+            width: 400px;
+            height: 45px;
+        }
+    </style>
+</head>
+<body>
+
+-o-border-image: url(email.png) 27;
+-moz-border-image: url(email.png) 27;
+-webkit-border-image: url(email.png) 27
+<div style="-o-border-image: url(email.png) 27;
+           -moz-border-image: url(email.png) 27;
+           -webkit-border-image: url(email.png) 27;">默认边框宽度</div>
+-o-border-image: url(email.png) 27/27px;
+-moz-border-image:url(email.png) 27/27px;
+-webkit-border-image: url(email.png) 27/27px
+<div style="-o-border-image: url(bg.jpg) 27/27px;
+           -moz-border-image:url(bg.jpg) 27/27px;
+           -webkit-border-image: url(bg.jpg) 27/27px">指定边框宽27px,默认是拉伸边框图片</div>
+
+-o-border-image: url(email.png) 27/27px repeat;
+-moz-border-image: url(email.png) 27/27px repeat;
+-webkit-border-image: url(email.png) 27/27px repeat
+<div style="-o-border-image: url(email.png) 27/27px repeat;
+           -moz-border-image: url(email.png) 27/27px repeat;
+           -webkit-border-image: url(email.png) 27/27px repeat;">指定边框宽27px,平铺边框图片</div>
+
+-o-border-image: url(email.png) 27/27px round;
+-moz-border-image: url(email.png) 27/27px round;
+-webkit-border-image: url(email.png) 27/27px round;
+<div style="-o-border-image: url(email.png) 27/27px round;
+            -moz-border-image: url(email.png) 27/27px round;
+            -webkit-border-image: url(email.png) 27/27px round;">指定边框宽27px,以round方式平铺边框图片</div>
+
+-o-border-image: url(email.png) 27/27px stretch round;
+-moz-border-image: url(email.png) 27/27px stretch round;
+-webkit-border-image: url(email.png) 27/27px stretch round
+<div style="-o-border-image: url(email.png) 27/27px stretch round;
+            -moz-border-image: url(email.png) 27/27px stretch round;
+            -webkit-border-image: url(email.png) 27/27px stretch round">
+    指定边框宽27px,以横向strech方式覆盖边框图片,以纵向round方式平铺图片</div>
+
+</body>
+</html>

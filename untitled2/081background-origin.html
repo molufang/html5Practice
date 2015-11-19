@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>背景相关属性</title>
+
+    <style type="text/css">
+        div {
+            border: 10px dotted #444;
+            padding: 12px;
+            height: 30px;
+            width: 200px;
+        }
+    </style>
+
+</head>
+<body>
+
+<!--背景图片从内容区域开始覆盖-->
+background-image: url(bg.jpg);background-origin: content-box;-webkit-background-origin: content-box;background-repeat: no-repeat
+<div style="background-image: url(bg.jpg);background-origin: content-box;-webkit-background-origin: content-box;background-repeat: no-repeat">测试文字</div>
+
+<!--背景图片从补丁区域开始覆盖-->
+background-image: url(bg.jpg);background-origin: padding-box;-webkit-background-origin: padding-box;background-repeat: no-repeat
+<div style="background-image: url(bg.jpg);background-origin: padding-box;-webkit-background-origin: padding-box;background-repeat: no-repeat">测试文字</div>
+
+<!--背景图片从边框区域开始覆盖-->
+background-image: url(bg.jpg); background-origin: border-box;-webkit-background-origin: border-box;background-repeat: no-repeat
+<div style="background-image: url(bg.jpg); background-origin: border-box;-webkit-background-origin: border-box;background-repeat: no-repeat">测试文字</div>
+
+</body>
+</html>

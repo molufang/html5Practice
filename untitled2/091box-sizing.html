@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>box-sizing属性</title>
+</head>
+<body>
+
+<!--控制元素内容区的宽度和高度-->
+<div style="width: 200px;height: 100px;background-color: #ddd;background-clip: content-box;border: 20px solid #555;
+            padding: 20px;box-sizing: padding-box;-moz-box-sizing: content-box;">box-sizing: content-box</div>
+<!--控制元素的内容去加内补丁区的宽度和高度-->
+<div style="width: 200px;height: 100px;background-color: #ddd;background-clip: content-box;border: 20px solid #555;
+            box-sizing: padding-box;-moz-box-sizing: padding-box;">box-sizing: padding-box</div>
+<!--控制内容去加内补丁区再加边框区的宽度和高度-->
+<div style="width: 200px;height: 100px;background-color: #ddd;background-clip: content-box;border: 20px solid #555;
+            padding: 20px;box-sizing: border-box;-moz-box-sizing: border-box;">box-sizing: border-box</div>
+
+</body>
+</html>
