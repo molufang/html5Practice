@@ -12,11 +12,55 @@
         }
 
         div>div {
-            display: ;
+
+            /*inline-block保证一行显示*/
+            display:inline-block;
+            border: 1px solid black;
         }
+
+        a {
+            text-decoration: none;
+            /*block盒模式,允许设置高度,宽度*/
+            display: block;
+            width: 120px;
+            padding: 10px;
+            background-color: #eee;
+        }
+
+        a:hover {
+            /*设置鼠标悬停时的背景颜色*/
+            background-color: #aaa;
+            font-weight: bold;
+        }
+
+
+
     </style>
 </head>
 <body>
+
+
+<div>
+
+    <div>
+        <a href="http://www.baidu.com">百度应用</a>
+    </div>
+
+    <div>
+        <a href="http://www.baidu.com">百度应用</a>
+    </div>
+    <div>
+        <a href="http://www.baidu.com">百度应用</a>
+    </div>
+    <div>
+        <a href="http://www.baidu.com">百度应用</a>
+    </div>
+
+</div>
+
+
+
+
 
 </body>
 </html>

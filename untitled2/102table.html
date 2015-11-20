@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>表格相关的盒模式</title>
+
+    <style type="text/css">
+
+        div>div {
+            display: table-row;
+            padding: 10px;
+        }
+
+        div>div>div {
+            display: table-cell;
+            border: 1px solid black;
+        }
+
+    </style>
+</head>
+<body>
+
+<div style="display: table;width: 400px">
+    <div style="display: table-caption;">百度应用</div>
+    <div>
+        <div>iOS</div>
+        <div>iOS</div>
+    </div>
+
+    <div>
+        <div>iOS</div>
+        <div>iOS</div>
+    </div>
+
+</div>
+
+
+
+
+</body>
+</html>
