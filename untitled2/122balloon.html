@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>漂浮的气球</title>
+    <style type="text/css">
+
+        img#target {
+            position: absolute;
+            -moz-transition: left 5s linear,top 5s linear;
+            -webkit-transition: left 5s linear,top 5s linear;
+            -o-transition: left 5s linear,top 5s linear;
+        }
+    </style>
+</head>
+<body>
+
+<img id="target" src="garbage.png"  alt="气球" />
+
+<script type="text/javascript">
+    var  target = document.getElementById("target");
+    target.style.left = "0px";
+    target.style.top = "0px";
+    document.onmousedown = function(evt) {
+        target.style.left = evt.pageX + "px";
+        target.style.top = evt.pageY + "px";
+    }
+
+</script>
+
+
+</body>
+</html>

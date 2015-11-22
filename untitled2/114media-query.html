@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>针对浏览器高度调整布局</title>
+    <style type="text/css">
+
+        #container {
+            text-align: center;
+            margin: auto;
+            width: 750px;
+
+        }
+
+
+        #container>div {
+            border:1px solid black;
+            text-align: left;
+            box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            border-radius: 12px 12px 0px 0px;
+            background-color: #ffc;
+            padding: 5px;
+
+        }
+
+        div#left {
+            width: 300px;
+            height: 230px;
+            float: left;
+        }
+
+        div#main {
+            width:450px;
+            height: 230px;
+            float: left;
+            clear: right;
+
+        }
+
+
+        div#right {
+            right: 750px;
+            float: left;
+        }
+
+
+        @media screen and (min-width: 100px){
+
+            #container {
+                text-align: center;
+                margin: auto;
+                width: 960px;
+            }
+
+            #container>div {
+                border:1px solid #aaf;
+                box-sizing: border-box;
+                -moz-box-sizing: border-box;
+                border-radius: 12px 12px 0px 0px;
+                background-color: #ffc;
+                padding: 5px;
+            }
+
+            div#left {
+                width:240px;
+                float: left;
+                height: 240px;
+            }
+
+            div#main {
+                width:460px;
+                float: left;
+                height: 240px;
+                clear: none;
+            }
+
+            div#right {
+                width:260px;
+                float: left;
+                height: 240px;
+            }
+
+        }
+
+
+
+
+        @media screen and (max-width: 480px) {
+            #container {
+                text-align: center;
+                margin: auto;
+                width: 450px;
+            }
+
+            #container>div {
+
+                border:1px solid #aaf;
+                box-sizing: border-box;
+                -moz-box-sizing: border-box;
+                border-radius: 12px 12px 0px 0px;
+                background-color: #ffc;
+                padding: 5px;
+
+            }
+
+            div#left {
+                width: 450px;
+                float: left;
+                height: 140px;
+            }
+
+            div#main {
+                width: 450px;
+                float: left;
+                height: 22px;
+                clear: both;
+            }
+
+            div#right {
+                width: 450px;
+                float: left;
+                height: 160px;
+            }
+
+
+
+        }
+
+
+
+
+
+
+
+
+
+    </style>
+</head>
+<body>
+
+
+<div id="container">
+    <div id="left">
+        <h2>疯狂系列</h2>
+        &nbsp;&nbsp;&nbsp;&nbsp;今天，我们怀着崇敬的心情，在这里隆重集会，纪念胡耀邦同志诞辰100周年，缅怀他为中国革命、建设、改革事业作出的卓越贡献，
+        追思学习他的革命精神和崇高风范，激励全党全国各族人民为夺取中国特色社会主义新胜利、实现中华民族伟大复兴的中国梦而努力奋斗
+    </div>
+
+    <div id="main">
+        <h2>疯狂系列</h2>
+        &nbsp;&nbsp;&nbsp;&nbsp;胡耀邦同志是久经考验的忠诚的共产主义战士，伟大的无产阶级革命家、政治家，我军杰出的政治工作者，长期担任党的重要领导职务的卓越领导人。
+        他14岁加入中国共产主义青年团，18岁转为中国共产党党员。在长达60年的革命生涯中，从苏区的“红小鬼”到党和国家领
+        导人，从冲锋陷阵的革命战士到改革开放的开拓者，他为中华民族独立和解放、为社会主义革命和建设、为中国特色社会主义探索和开创建立了不朽功勋。
+    </div>
+
+    <div id="right">
+        <h2>疯狂系列</h2>
+        &nbsp;&nbsp;&nbsp;&nbsp;100年前，胡耀邦同志出生在湖南省浏阳县。那个时代的中国，风雨如晦，国运飘摇。为了挽救民族危亡，中国人民和无数仁人志士顽强奋斗、上下
+        求索。少年时代，胡耀邦同志就关心国家和民族前途命
+        运，
+    </div>
+
+</div>
+
+
+
+
+
+</body>
+</html>

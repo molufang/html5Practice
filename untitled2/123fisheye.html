@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>fisheye</title>
+    <style type="text/css">
+
+        a:link {
+            text-decoration: none;
+        }
+
+        div>a {
+            display: inline-block;
+            text-align: center;
+            width:120px;
+            padding: 8px;
+            background-color: #eee;
+            border:2px solid black;
+            border-radius: 20px;
+        }
+
+
+        /*定义一个关键帧*/
+        @-webkit-keyframes 'fisheye' {
+
+            /*定义动画开始处的关键帧*/
+            0% {
+                -webkit-transform: scale(1);
+                background-color: #eee;
+                border-radius: 10px;
+            }
+
+            /*定义动画进行40%时的关键帧*/
+            40% {
+                -webkit-transform: scale(1.5);
+                background-color: #bbb;
+                border-radius: 10px;
+            }
+            /*定义动画进行100%时的关键帧*/
+            100% {
+                -webkit-animation-name: 'fisheye';
+                -webkit-animation-duration: 3s;
+                -webkit-animation-iteration-count: infinite;
+            }
+        }
+
+        div>a:hover {
+
+            /*指定执行kjava动画*/
+            -webkit-animation-name: 'fisheye';
+
+            /*指定动画的执行时间*/
+            -webkit-animation-duration: 3s;
+
+            /*指定动画的循环无限次*/
+            -webkit-animation-iteration-count: infinite;
+        }
+
+    </style>
+</head>
+<body>
+
+<div>
+    <a href="http://www.baidu.com" alt="baidu">百度</a>
+    <a href="http://www.baidu.com" alt="fkjava">百度</a>
+    <a href="http://www.baidu.com" alt="fkjava">百度</a>
+    <a href="http://www.baidu.com" alt="fkjava">百度</a>
+    <a href="http://www.baidu.com" alt="fkjava">百度</a>
+</div>
+
+
+
+</body>
+</html>
