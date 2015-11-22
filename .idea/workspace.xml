@@ -1,23 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2f77c7ef-570b-4e22-8a71-2a6f8d717249" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/untitled2/132autoConversion.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/untitled2/132explicitConvert.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/untitled2/132explicit_var.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/untitled2/132globalInHandler.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/untitled2/132implicit_var.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/untitled2/132noBlockScope.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/untitled2/132noBlockScope2.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/untitled2/132scopeTest.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/untitled2/133infinity.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/untitled2/133infinityArith.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/untitled2/133judgeNav.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/untitled2/133octal.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/untitled2/133simpleNumber.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/untitled2/133simpleNumber2.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-    </list>
+    <list default="true" id="2f77c7ef-570b-4e22-8a71-2a6f8d717249" name="Default" comment="" />
     <ignored path="html5Practice.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
