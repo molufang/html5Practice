@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>事件处理中的局部变量和全局变量</title;
+    <script type="text/javascript">
+        var  x = "全局变量";
+    </script>
+</head>
+<body>
+
+<input type="button" value="局部变量" onclick="var x ='局部变量'; alert('输出x局部变量的值:'+x );" />
+
+<input type="button" value="全局变量" onclick="alert('输出x全局变量的值:'+x );" />
+
+</body>
+</html>

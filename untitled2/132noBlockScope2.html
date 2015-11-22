@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>noBlockScope</title>
+
+    <script type="text/javascript">
+        var scope = "全局变量";
+
+        function test () {
+            document.writeln(scope + "<br />");
+
+            var scope = "局部变量";
+
+            document.writeln(scope + "<br />");
+
+        }
+
+        test();
+
+    </script>
+
+</head>
+<body>
+
+</body>
+</html>
