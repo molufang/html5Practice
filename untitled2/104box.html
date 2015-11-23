@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>盒模型实现多栏布局</title>
+    <style type="text/css">
+
+        body {
+            margin: 0px;
+        }
+
+        div#container {
+            display: box;
+            display: -moz-box;
+            display: -webkit-box;
+            width:960px;
+            text-align: left;
+        }
+
+        #container>div{
+            border:1px solid black;
+            box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            border-radius: 12px 12px 0px 0px;
+            background-color: #ffc;
+            padding: 5px;
+        }
+
+
+    </style>
+</head>
+<body>
+
+<div style="margin: auto;text-align: center">
+    <div id="container">
+        <div style="width: 220px">
+            &nbsp;&nbsp;&nbsp;&nbsp;去年11月，我们齐聚北京，共同描绘亚太发展蓝图。时隔一年，我们再次聚首，目标仍然是深化亚太合作，推进亚太共同发展。 菲律宾为筹备
+            这次亚太经合组织领导人非正式会议做了大量工作，我们对此表示感谢。
+        </div>
+        <div style="width: 500px">
+            &nbsp;&nbsp;&nbsp;&nbsp;去年11月，我们齐聚北京，共同描绘亚太发展蓝图。时隔一年，我们再次聚首，目标仍然是深化亚太合作，推进亚太共同发展。 菲律宾为筹备
+            这次亚太经合组织领导人非正式会议做了大量工作，我们对此表示感谢。
+        </div>
+        <div style="width: 240px">
+            &nbsp;&nbsp;&nbsp;&nbsp;去年11月，我们齐聚北京，共同描绘亚太发展蓝图。时隔一年，我们再次聚首，目标仍然是深化亚太合作，推进亚太共同发展。 菲律宾为筹备
+            这次亚太经合组织领导人非正式会议做了大量工作，我们对此表示感谢。
+        </div>
+
+    </div>
+
+</div>
+
+
+</body>
+</html>

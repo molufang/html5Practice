@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>垂直排列</title>
+    <style type="text/css">
+        div#container{
+            border: 1px solid black;
+            padding: 5px;
+            width:600px;
+            height: 300px;
+            display: box;
+            display: -moz-box;
+            display: -webkit-box;
+            -moz-box-orient: vertical;
+            -webkit-box-orient:vertical;
+        }
+
+        div>div {
+            border: 1px solid #aaf;
+            box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            border-radius: 12px 12px 0px 0px;
+            padding: 5px;
+        }
+
+    </style>
+</head>
+<body>
+
+<div id="container">
+    <div>科目一</div>
+    <div>科目二</div>
+    <div>科目三</div>
+</div>
+
+</body>
+</html>
