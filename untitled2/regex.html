@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>regex</title>
+     <script type="text/javascript">
+
+
+         alert(/^<a href = (\'|\")[a-zA-Z0-9\/:\.]*(\'|\")>.*<\/a>$/.test("<a href = 'http://www.baidu.com'>疯狂讲义</a>"));
+
+
+         function trim(s)
+         {
+
+             return s.replace(/(^\s*)|(\s*$)/g,"");
+         }
+
+         alert (trim('hello,javascript'));
+
+     </script>
+
+</head>
+<body>
+
+</body>
+</html>
