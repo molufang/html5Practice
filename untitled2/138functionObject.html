@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>functionObject</title>
+
+    <script type="text/javascript">
+
+        var hello = function(name)
+        {
+            return name + ",您好";
+        }
+
+        alert("hello是否为function对象:"+（hello instanceof Function）+ "\nhello是否为object对象:"+(hello instanceof Object));
+
+        alert(hello);
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>
