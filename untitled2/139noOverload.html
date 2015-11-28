@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>noOverload</title>
+
+    <script type="text/javascript">
+
+        function test()
+        {
+            alert("第一个无参数的test函数");
+        }
+
+//        函数名实唯一标识,第二个会覆盖第一个函数的函数名
+        function test(name)
+        {
+            alert("第二个带name参数的test函数:"+name);
+        }
+
+//        即使不传入参数,程序依然调用第一个参数的test函数
+        test();
+
+    </script>
+
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>instanceProperty</title>
+    <script type="text/javascript">
+
+        function Person(national,age)
+        {
+            this.age = age;
+            Person.national = national;
+
+            var  bb = 0;
+        }
+
+
+        var  p1 = new Person('中国',29);
+
+        document.writeln("创建第一个person对象<br />");
+
+        //输出第一个对象p1的年龄和国籍
+
+        document.writeln("p1的age属性为"+p1.age + "<br />");
+
+        document.writeln("p1的national属性为"+p1.national + "<br />");
+
+        document.writeln("通过Person访问静态national属性为"+Person.national + "<br />");
+
+        document.writeln("p1的bb属性为"+p1.bb+"<br /><hr />");
+
+        var p2 = new Person('美国',32);
+
+        document.writeln("创建两个Person对象之后<br />");
+
+        document.writeln("p1的age属性为"+p1.age + "<br />");
+
+        document.writeln("p1的national属性为"+p1.national + "<br />");
+
+        document.writeln("p2的age属性为"+p2.age + "<br />");
+
+        document.writeln("p2的antional属性为"+p2.national + "<br />");
+
+        document.writeln("通过Person访问静态national属性为"+Person.national + "<br>");
+
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>duckType</title>
+    <script type="text/javascript">
+
+        function changeAge(person)
+        {
+            if(typeof person == 'object' && typeof person.age == 'number')
+            {
+                document.write("函数执行前person的age:"+person.age + "<br />");
+                person.age = 10;
+                document.write("函数执行中person的age:"+person.age+"<br />");
+            }else  {
+                document.writeln("函数类型不符合"+ typeof person + "<br />");
+            }
+
+
+        }
+
+        changeAge();
+        changeAge('xxx');
+        changeAge(true);
+
+        p = {abc: 34};
+        changeAge(p);
+
+        person = {age : 25};
+
+        changeAge(person);
+
+    </script>
+
+
+</head>
+<body>
+
+</body>
+</html>

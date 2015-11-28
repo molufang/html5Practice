@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>functionApply</title>
+
+    <script type="text/javascript">
+        var myfun = function (a,b)
+        {
+            alert("a的值是:"+a+"\n的值是:"+b);
+        }
+        myfun.call(window,12,23)
+        var example = function (num1,num2)
+        {
+//            直接用argument代表调用example函数时传入所有的参数
+//            argument传入的是数组
+            myfun.apply(this,arguments);
+        }
+        example(20,40);
+//      为apply()动态调用传入数组
+        myfun.apply(window,[12,23]);
+
+    </script>
+
+</head>
+<body>
+
+</body>
+</html>

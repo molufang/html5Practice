@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>objectTest</title>
+    <script type="text/javascript">
+
+        function Person(name)
+        {
+            this.name = name;
+        }
+
+        var p = new Person('yeeku');
+
+        if (p instanceof Person)
+        document.writeln("p是Person的实例<br />");
+
+        if (p instanceof Object)
+        document.writeln("P是Object的实例")
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

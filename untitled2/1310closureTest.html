@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>closureTest</title>
+    <script type="text/javascript">
+
+
+        function Person()
+        {
+
+            var loval = '疯狂java联盟';
+             this.info = function()
+             {
+                 document.writeln("locVal的值为:"+loval);
+                 return loval;
+             }
+        }
+
+        var p = new Person();
+
+        var val = p.info();
+
+        alert(val);
+
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

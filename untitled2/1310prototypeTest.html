@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>prototypeTest</title>
+
+    <script type="text/javascript">
+
+        function Person(name,age)
+        {
+            this.name = name;
+            this.age = age;
+
+            this.info = function ()
+            {
+                document.writeln("姓名:"+this.name);
+                document.writeln("姓名:"+this.age);
+            }
+
+        }
+
+
+        var p1 = new Person('yeeku',29);
+
+        p1.info();
+
+//        此处不可调用 walk方法,变量p还没有walk方法
+//        将walk方法增加到Person的prototype属性上
+        Person.prototype.walk = function()
+        {
+            document.writeln(this.name) + '正在慢慢溜达...<br />';
+        }
+
+        document.writeln('<hr />');
+
+        var p2 = new Person('leegang',30);
+
+        p2.info();
+
+        document.writeln('<hr />');
+
+        p2.walk();
+
+        document.writeln('<hr />');
+
+        p1.walk();
+
+    </script>
+
+</head>
+<body>
+
+</body>
+</html>

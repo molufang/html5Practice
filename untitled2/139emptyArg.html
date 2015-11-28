@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>emptyArg</title>
+
+    <script type="text/javascript">
+
+        function changeAge(person)
+        {
+            if (typeof person == 'object')
+            {
+                person.age = 10;
+
+                document.write("函数执行中person的age:"+person.age+"<br />");
+            }
+            else  {
+                alert("函数类型不符合:"+typeof person);
+            }
+        }
+
+//        javaScript会将没有传入实参的参数值自动设置为undefined
+        changeAge();
+
+    </script>
+
+</head>
+<body>
+
+</body>
+</html>
