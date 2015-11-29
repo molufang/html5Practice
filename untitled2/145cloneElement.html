@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>cloneElement</title>
+
+
+    <ul id="d">
+        <li>疯狂讲义</li>
+    </ul>
+
+    <script type="text/javascript">
+
+        var ul = document.getElementById("d");
+//        复制ul的第二个子节点(不复制当前节点的后代节点) cloneNode false表示仅复制当前节点
+        var ajax = ul.firstChild.nextSibling.cloneNode(false);
+//      修改被复制的节点
+        ajax.innerHTML = "疯狂讲义";
+//      将复制的节点添加到页面中
+        ul.appendChild(ajax);
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

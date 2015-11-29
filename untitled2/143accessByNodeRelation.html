@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>根据相关节点关系访问HTML元素</title>
+    <script type="text/javascript">
+        <!--定义改变背景颜色的css,表示被选中的项-->
+        .selected {
+            background-color:#66f
+        }
+    </script>
+</head>
+<body>
+
+<ol id="books">
+    <li id="java">轻量级的java1</li>
+    <li id="ssh">ssh2</li>
+    <li id="ajax" class="selected">ajax3</li>
+    <li id="xml">xml4</li>
+    <li id="ejb">ejb5</li>
+    <li id="workflow">workflow6</li>
+</ol>
+
+
+
+<input type="button" value="父节点" onclick="change(curTarget.parentNode);" />
+
+<input type="button" value="第一个" onclick="change(curTarget.parentNode.firstChild.nextSibling);" />
+
+
+<input type="button" value="上一个" onclick="change(curTarget.previousSibling.previousSibling);" />
+
+<input type="button"  value="下一个" onclick="change(curTarget.nextSibling.nextSibling);" />
+
+<input type="button" value="最后一个节点" onclick="change(curTarget.parentNode.lastChild.previousSibling);" />
+
+<script type="text/javascript">
+
+
+    var curTarget = document.getElementById("ajax");
+
+    var change = function(target)
+    {
+        alert(target.innerHTML);
+    }
+
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

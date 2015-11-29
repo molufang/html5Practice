@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>访问表项</title>
+
+
+</head>
+<body>
+
+<select id="myselect" name = "mySelect" size="6">
+    <option value="java">java1</option>
+    <option value="ssh">ssh2</option>
+    <option value="ajax" selected>ajax3</option>
+    <option value="xml">xml4</option>
+    <option value="ejb">ejb5</option>
+    <option value="workflow">workflow6</option>
+</select> <br />
+<input type="button" value="第一个" onclick="change(curTarget.options[0]);" />
+<input type="button" value="上一个" onclick="change(curTarget.options[curTarget.selectedIndex-1]);" />
+<input type="button" value="下一个" onclick="change(curTarget.options[curTarget.selectedIndex + 1]);" />
+<input type="button" value="最后一个" onclick="change(curTarget.options[curTarget.length-1]);" />
+<!--使用selectedIndex适用于所有浏览器,根据节点适用于部分浏览器-->
+<script type="text/javascript">
+    var curTarget = document.getElementById("myselect");
+    var  change = function (target) {
+        alert(target.text);
+    }
+
+</script>
+
+
+
+</body>
+</html>

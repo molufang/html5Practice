@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>status2</title>
+</head>
+<body onload="stack();">
+<script type="text/javascript">
+    var statusText = "自定义的动画状态栏文字...";
+    var out = "";
+//  动画时间间隔
+    var pause = 25;
+//  动画宽度
+    var animateWidth = 20;
+    var position = animateWidth;
+    var i = 0;
+    var stack = function()
+    {
+        if (statusText.charAt(i) != " ")
+        {
+            out = " ";
+//          将0到i-1个字符拼成输出字符串
+            for (var  j = 0;j < i;j++)
+            {
+                out += statusText.charAt(j);
+            }
+//          增加一定宽度的空格
+            for (j = i; j < position; j ++)
+            {
+                out += " ";
+            }
+
+//          将第i个字符添加到输出字符串里
+            out += statusText.charAt(i);
+            for (j = position; j < animateWidth; j++)
+            {
+                out += " ";
+            }
+//            如果后出来的字符仅靠前面的字符串
+            window.status = out;
+            if (position == i)
+            {
+                animateWidth++;
+                position = animateWidth;
+//             i+1 ,对应为多出现一格字符
+                i++;
+            } else
+            {
+                position--;
+            }
+        } else {
+            i ++;
+        }
+        if (i < statusText.length)
+        {
+            setTimeout("stack()",pause);
+        }
+    }
+
+</script>
+
+</body>
+</html>

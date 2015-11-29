@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>addOption2</title>
+</head>
+<body id="test">
+
+<script type="text/javascript">
+
+    <!--创建一个select对象-->
+    var a = document.createElement("select");
+
+    for (var i = 0;i < 10;i++)
+    {
+//        创建一个option对象
+        var op = new Option('新增的选项' +i,i);
+//        直接为指定选项赋值;
+        a.options[i] = op;
+
+    }
+
+    a.size = 5;
+//    将列表框添加成body元素的子节点
+    document.getElementById("test").appendChild(a);
+
+</script>
+
+</body>
+</html>

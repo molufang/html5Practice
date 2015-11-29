@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>accessById</title>
+
+    <script type="text/javascript">
+
+        var accessById = function ()
+        {
+            alert(document.getElementById("a").innerHTML+"\n"+document.getElementById("b").value);
+        }
+
+    </script>
+
+</head>
+<body>
+
+<div id = "a">疯狂讲义</div>
+<textarea id="b" rows="3" cols="25">轻量级</textarea>
+<input type="button" value="访问2个元素" onclick="accessById();" />
+
+</body>
+</html>
