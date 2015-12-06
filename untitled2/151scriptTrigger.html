@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>scriptTrigger</title>
+</head>
+<body>
+
+<h2>脚本触发事件</h2>
+<form method="post" name="register" action="http://www.baidu.com">
+    用户名:<input type="text" name="user" /><br />
+    密&nbsp;&nbsp;码:<input type="password" name="password" /><br />
+    邮&nbsp;&nbsp;箱:<input type="text" name="email" /><br />
+    <input type="button" id="regist" value="提交" />
+</form>
+
+
+<script type="text/javascript">
+<!--为字符串增加trim方法,使用正则表达式截取空格-->
+    String.prototype.trim = function()
+    {
+        return this.replace(/^\s*/,"").replace(/\s*$/,"");
+    }
+//    负责处理表单submit事件的函数
+    var check = function()
+    {
+//       访问页面中的第一个表单
+        var form = document.forms[0];
+//       错误字符串
+        var errStr = "";
+//       当用户名为空时
+        if (form.user.value == null||form.user.value.trim() == "")
+        {
+            errStr += "\n用户名不能为空";
+            form.user.focus();
+        }
+//      密码为空时
+        if (form.pass.value == null || form.pass.value.trim() == "")
+        {
+            errStr += "\n密码不能为空!";
+            form.pass.focus();
+        }
+//      当电子邮件为空时
+        if (errStr !== "")
+        {
+//           弹出出错提示
+            alert(errStr);
+        }
+//        如果错误字符串为空,则表明数据校验通过,可以提交表单
+        else  {
+            form.submit();
+        }
+//        为第一个表单的onclick绑定事件处理器
+        document.getElementById("regist").onclick = check;
+    }
+
+
+</script>
+
+
+</body>
+</html>

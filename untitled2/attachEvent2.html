@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>attachEvent2</title>
+
+</head>
+<body>
+
+<script type="text/javascript">
+
+    var test = function()
+    {
+        alert("点击按钮");
+    }
+
+    var  haha = function()
+    {
+        alert("哈哈函数也被触发");
+    }
+
+//    使用attachEvent绑定事件处理函数
+    document.getElementById("bn1").attachEvent("onclick",test);
+//    使用attachEvent绑定事件处理函数
+    document.getElementById("bn1").attachEvent("onclick",haha);
+
+</script>
+
+</body>
+</html>

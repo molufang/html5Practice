@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>navigation</title>
+
+    <script type="text/javascript">
+
+        switch (performance.navigation.type)
+        {
+            case 0:
+                alert("正常导航到该页面!");
+            case 1:
+                alert("用户重新加载该页面!");
+            case 2:
+                alert("用户前进到该页面!");
+            default:
+                alert("其他方法进入该页面!");
+                break;
+        }
+
+
+    </script>
+
+</head>
+<body>
+
+</body>
+</html>

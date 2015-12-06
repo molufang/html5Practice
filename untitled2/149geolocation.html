@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>getolocation</title>
+
+    <script type="text/javascript">
+
+        var geoHandler = function (position) {
+            var geoMsg = "用户所在的地理位置信息是:<br />";
+            geoMsg += "timestamp属性为:" + position.timestamp + "<br />";
+//          获取coordinates对象,该对象里包含啦详细的地理位置信息
+            var coords = position.coords;
+//            Coordinates对象的所有属性
+            for (var prop in coords) {
+                geoMsg += prop + "-->" + coords[prop] + "<br />";
+            }
+//            输出地理位置信息
+            document.writeln(geoMsg);
+
+        }
+
+
+        var errorHandler = function (error) {
+//            为不同错误代码定义错误提示
+            var errMsg = {
+                1:'用户拒绝啦位置服务',
+                2:"无法获取地址位置信息",
+                3:'获取地理位置信息超时'
+            };
+//           弹出错误提示
+            alert(errMsg[error.code]);
+        }
+
+        //获取地理位置信息
+        navigator.geolocation.getCurrentPosition(geoHandler,errorHandler,{
+            enableHighAccuracy:true,
+            maximumAge:1000
+        });
+
+
+
+
+
+
+    </script>
+
+</head>
+<body>
+
+</body>
+</html>
