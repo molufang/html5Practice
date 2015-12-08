@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bubble</title>
+</head>
+
+
+<!--<body onclick="gotClick('body元素'); event.cancelable = true;" />阻止冒泡-->
+<body onclick="gotClick('body元素');" />
+
+<table onclick="gotClick('table元素');">
+    <tr onclick="gotClick('tr元素');">
+        <td onclick="gotClick('td元素');">
+            <p onclick="gotClick('gotClick元素');">
+                <input type="button" value="单击我" onclick="gotClick('按钮');" />
+            </p>
+        </td>
+    </tr>
+</table>
+
+<hr/>
+
+<div id="results"></div>
+
+<script type="text/javascript">
+    var gotClick = function(who)
+    {
+        document.getElementById("results").innerHTML += who + "被单击啦<br />";
+    }
+</script>
+
+
+
+</body>
+</html>

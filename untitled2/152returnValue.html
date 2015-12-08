@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>returnValue</title>
+</head>
+<body>
+
+<a id="wjc" href="http://www.baidu.com">百度</a>
+<script type="text/javascript">
+
+    var clickHandler = function()
+    {
+        var ok = confirm('是否转入百度?');
+        event.returnValue = ok;
+    }
+
+    document.getElementById("wjc").onclick = clickHandler;
+
+</script>
+
+</body>
+</html>
