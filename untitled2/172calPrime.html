@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>calPrime</title>
+</head>
+<body>
+
+起始值:<input type="text" id="start" name="start" /><br />
+结束值:<input type="text" id="end" name="end" /><br />
+
+<input type="button" value="计算" onclick="cal();" />
+
+<script type="text/javascript">
+
+    var cal = function()
+    {
+        var start = parseInt(document.getElementById("start").value);
+        var end = parseInt(document.getElementById("end").value);
+//        如果start大于,等于end,则直接结束该函数
+        if (start >= end)
+        {
+            return;
+        }
+
+        var cal = new Worker("172worker.js");
+//      定义需要提交给worker线程的数据
+        var data = {
+            start:start,
+            end:end
+        }
+//        向worker线程提交表格
+        cal.postMessage(JSON.stringify(data));
+        cal.onmessage = function (event) {
+
+            var table = document.getElementById("show");
+//            清空该表格原有的内容
+            table.innerHTML = "";
+//            获取worker线程返回的数据
+            var result = event.data;
+            var nums = result.split(",");
+//          定义表格总共包含多少列
+            var COLS_NUM = 7;
+            for (var i = 0; i < (nums.length - 1)/COLS_NUM;i++)
+            {
+//                添加表格行
+                var row = table.insertRow(i);
+
+                for (var j = 0; j < COLS_NUM && i * COLS_NUM + j < nums.length - 1;j++)
+                {
+                    row.insertCell(j).innerHTML = nums[i * COLS_NUM +j];
+                }
+            }
+        }
+    }
+
+</script>
+
+</body>
+</html>

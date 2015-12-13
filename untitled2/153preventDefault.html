@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>preventDefault</title>
+</head>
+<body>
+
+友情链接:<br />
+
+<a id="mylink" href="http://www.baidu.com">疯狂讲义</a>
+
+<script type="text/javascript">
+    var killClicks = function(event)
+    {
+        event.preventDefault();
+        alert("超链接被点击");
+    }
+    document.getElementById("mylink").addEventListener("click",killClicks,true);
+</script>
+
+</body>
+</html>

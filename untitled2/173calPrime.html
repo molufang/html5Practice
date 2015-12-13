@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>calPrime</title>
+</head>
+<body>
+
+起始值:<input type="text" id="start" name="start" /><br />
+
+结束值:<input type="text" id="end" name="end" /> <br />
+
+个数:<input type="text" id="count" name="count" /><br />
+
+<input type="button" value="计算" onclick="cal();" />
+
+<table id="show"></table>
+
+<script type="text/javascript">
+
+
+    var cal = function()
+    {
+//        得到用户输入的start end 的值
+        var start = parseInt(document.getElementById("start").value);
+        var end = parseInt(document.getElementById("end").value);
+
+        var count = parseInt(document.getElementById);
+
+
+        if (start >= end)
+        {
+            return;
+        }
+
+        var cal = new Worker("173worker.js");
+
+//        定义需要交给线程的数据
+        var data = {
+            start:start,
+            end:end,
+            count:count
+        };
+
+//        向worker线程提交数据
+        cal.postMessage(JSON.stringify(data));
+
+
+
+    }
+
+</script>
+
+</body>
+</html>
