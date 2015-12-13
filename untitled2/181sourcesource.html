@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>跨文档发送消息</title>
+    <script type="text/javascript">
+
+        var send = function()
+        {
+//            打开一个新的窗口
+            var targetWin = window.open('http://www.baidu.com','_blank','width=400,height=300');
+
+//            等该窗口装载完成时,向该窗口发送消息
+            targetWin.onload = function()
+            {
+                targetWin.postMessage(document.getElementById("msg").value,"http://www.baidu.com");
+            }
+        }
+
+//        通过onmessage监听器监听其他窗口发送过来的消息
+        window.onmessage = function(ev)
+        {
+
+//            忽略来自其他域名的跨文档消息
+            if (ev.origin != "http://www.baidu.com")
+            {
+                return;
+            }
+
+            var show = document.getElementById("show");
+            show.innerHTML += (ev.origin + "传来啦消息" +ev.data + "<br />" );
+
+
+        };
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>
